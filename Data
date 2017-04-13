@@ -1,0 +1,23 @@
+/*
+SQLyog Community v11.31 (32 bit)
+MySQL - 5.7.17-0ubuntu0.16.04.1 
+*********************************************************************
+*/
+/*!40101 SET NAMES utf8 */;
+
+create table `PatientDetails` (
+	`Id` int (8),
+	`Name` varchar (96),
+	`Age` tinyint (8),
+	`Email` varchar (96)
+); 
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('11','David Moore','29','Cum.sociis@felisNulla.ca');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('12','Briar Burch','33','Donec@justositamet.ca');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('13','Rae Mckee','28','mi.fringilla.mi@Nunc.org');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('14','Roary Baldwin','37','lectus@orci.net');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('15','Shelley Barnes','30','tristique.pharetra@enim.ca');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('16','Sage Hamilton','22','Fusce.diam@Lorem.org');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('17','Richard Mays','30','In@auctor.edu');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('18','Christine Pacheco','38','Duis@elit.org');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('19','Yael Hodges','40','velit@Nullainterdum.com');
+insert into `PatientDetails` (`Id`, `Name`, `Age`, `Email`) values('20','Dana Colon','37','metus.eu.erat@non.edu');

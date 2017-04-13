@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Es5 React</title>
+	<link href="<%= cdomain %>/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="react-root">
+		<% if (serverComp.length > 0) { %>
+			<%- serverComp %>
+		<% } %>
+</div>
+</body>
+	<script type="text/javascript">
+		var tbl = "<%= tableName %>";
+		var cdomain = "<%= cdomain %>";
+		var data = <%- dataForJS %>;
+	</script>
+	<script src="<%= cdomain %>/js/jquery-1.12.0.min.js"></script>
+	<script src="<%= cdomain %>/js/bootstrap.min.js"></script>
+	<script src="<%= cdomain %>/js/browser.min.js"></script>
+	<script src="<%= cdomain %>/js/react.js"></script>
+	<script src="<%= cdomain %>/js/react-dom.js"></script>
+	<script type="text/babel" src="<%= cdomain %>/views/Es5.js"></script>
+</html>

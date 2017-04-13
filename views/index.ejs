@@ -1,0 +1,18 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= Domain %></title>
+	<link href="<%= Domain %>/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<% result.forEach(function(res){ %>
+<%= res.name %>
+<% }) %>
+<div id="Index"></div>
+<script src="<%= Domain %>/js/react.js"></script>
+<script src="<%= Domain %>/js/react-dom.js"></script>
+<script src="<%= Domain %>/js/browser.min.js"></script>
+</body>
+</html>
