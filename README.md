@@ -18,3 +18,7 @@ To Get running
 4 ) start app.js with : node app.js
 
 5 ) http://localhost:8000/
+
+6 ) POst Api : http://localhost:8000/viewMore
+
+Note : this is basic skeleton structure to get start [ learning purpose ]
