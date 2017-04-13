@@ -1,0 +1,30 @@
+{
+  "name": "express_poc_react",
+  "version": "1.0.0",
+  "description": "express_poc_react app",
+  "main": "app.js\t",
+  "scripts": {
+    "test": "node app.js\t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "NA"
+  },
+  "keywords": [
+    "express",
+    "poc"
+  ],
+  "author": "abhi",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mysql": "^2.13.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "squel": "^5.8.0"
+  }
+}
