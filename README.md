@@ -13,7 +13,7 @@ To Get running
 
 2 ) create data base in mysql with name HCS
 
-3 ) look into Data file where table structure and Dump Data query's are abalable 
+3 ) look into Data file where table structure and Dump Data query's are available 
 
 4 ) start app.js with : node app.js
 
