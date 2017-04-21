@@ -17,7 +17,7 @@
   "author": "abhi",
   "license": "ISC",
   "dependencies": {
-    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-es2015": "^1.2.0",
     "babel-register": "^6.24.1",
     "body-parser": "^1.17.1",
     "ejs": "^2.5.6",

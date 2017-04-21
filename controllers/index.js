@@ -31,6 +31,18 @@ router.get(con.Server_burl,function (req,res)
 	})
 })
 
+router.get(con.Server_burl+'Es6',function (req,res)
+{
+		var components = require('../ReactComponent/Es6.js')
+		var HelloComponent = React.createFactory(components.HelloComponent)
+
+		res.render('indexEs6',{ 
+				cdomain : con.Client_burl,
+				serverComp : ReactDOM.renderToStaticMarkup(HelloComponent()),
+				tableName : 'Express React POC client side'
+		})
+})
+
 // sample Api to collect data
 router.post(con.Server_burl+'viewMore',function (req,res)
 {
