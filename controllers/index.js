@@ -25,7 +25,7 @@ router.get(con.Server_burl,function (req,res)
 										data: result ,
 										tbl : 'Express React POC server side' 
 									})),
-				dataForJS : JSON.stringify(result),								// props for server client rendering
+				dataForJS : JSON.stringify(result),								// props for client rendering
 				tableName : 'Express React POC client side'
 			})
 	})
@@ -36,10 +36,17 @@ router.get(con.Server_burl+'Es6',function (req,res)
 		var components = require('../ReactComponent/Es6.js')
 		var HelloComponent = React.createFactory(components.HelloComponent)
 
-		res.render('indexEs6',{ 
-				cdomain : con.Client_burl,
-				serverComp : ReactDOM.renderToStaticMarkup(HelloComponent()),
-				tableName : 'Express React POC client side'
+		index_m.index(function (result) {
+
+			res.render('indexEs6',{ 
+					cdomain : con.Client_burl,
+					serverComp : ReactDOM.renderToStaticMarkup(HelloComponent({
+							data : result,
+							tbl : 'Express React POC server side'
+					})),
+					dataForJS : JSON.stringify(result),								// props for client rendering
+					tableName : 'Express React POC client side'
+			})
 		})
 })
 

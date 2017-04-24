@@ -13,6 +13,11 @@
 		<% } %>
 	</div>
 </body>
+	<script type="text/javascript">
+		var tbl = "<%= tableName %>";
+		var cdomain = "<%= cdomain %>";
+		var data = <%- dataForJS %>;
+	</script>
 	<script src="<%= cdomain %>/js/jquery-1.12.0.min.js"></script>
 	<script src="<%= cdomain %>/js/bootstrap.min.js"></script>
  	<script src="<%= cdomain %>/js/browser.min.js"></script>
