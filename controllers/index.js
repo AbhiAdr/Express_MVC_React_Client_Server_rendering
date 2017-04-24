@@ -23,10 +23,10 @@ router.get(con.Server_burl,function (req,res)
 				cdomain : con.Client_burl,
 				serverComp : ReactDOM.renderToStaticMarkup(HelloMessage({ 		// props for server side rendering
 										data: result ,
-										tbl : 'Express React POC server side' 
+										tbl : 'Express ES5 React server side' 
 									})),
 				dataForJS : JSON.stringify(result),								// props for client rendering
-				tableName : 'Express React POC client side'
+				tableName : 'Express ES5 React client side'
 			})
 	})
 })
@@ -42,10 +42,10 @@ router.get(con.Server_burl+'Es6',function (req,res)
 					cdomain : con.Client_burl,
 					serverComp : ReactDOM.renderToStaticMarkup(HelloComponent({
 							data : result,
-							tbl : 'Express React POC server side'
+							tbl : 'Express ES6 React server side'
 					})),
 					dataForJS : JSON.stringify(result),								// props for client rendering
-					tableName : 'Express React POC client side'
+					tableName : 'Express ES6 React client side'
 			})
 		})
 })
