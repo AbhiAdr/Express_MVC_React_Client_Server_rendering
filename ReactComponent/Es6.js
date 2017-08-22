@@ -1,6 +1,8 @@
-var isNode = typeof module !== 'undefined' && module.exports
-  , React = isNode ? require('react') : window.React
-  , ReactDOM = isNode ? require('react') : window.ReactDOM
+var ExecutionEnvironment = require('exenv');
+var DomAvl = ExecutionEnvironment.canUseDOM;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class HelloComponent extends React.Component {  
 
@@ -33,7 +35,8 @@ class HelloComponent extends React.Component {
   render(){
 
 
-	if (isNode) { var tblname = this.props.tbl;
+	if (DomAvl) {
+		var tblname = this.props.tbl;
 	} else {								// manipulate data on client or server side
 		var tblname = this.props.tbl;
 	}
@@ -43,9 +46,9 @@ class HelloComponent extends React.Component {
 				lastId = ObjectMapped.Id;				
 				return(
 						<tr key={index}>
-							<td>{ (isNode) ? 'Loading...' : ObjectMapped.Id }</td>
-							<td>{ (isNode) ? 'Loading...' : ObjectMapped.Name }</td>
-							<td>{ (isNode) ? 'Loading...' : ObjectMapped.Age }</td>
+							<td>{ (DomAvl) ? ObjectMapped.Id : 'Loading...' }</td>
+							<td>{ (DomAvl) ? ObjectMapped.Name : 'Loading...' }</td>
+							<td>{ (DomAvl) ? ObjectMapped.Age : 'Loading...' }</td>
 						</tr>
 				)
 	})
@@ -72,8 +75,8 @@ class HelloComponent extends React.Component {
   }
 }
 
-if (isNode) {
-  exports.HelloComponent = HelloComponent
+if (DomAvl) {
+  ReactDOM.render(<HelloComponent tbl= {tbl} cdomain={cdomain} data={data}/>, document.getElementById('react-root'))	
 } else {
-  ReactDOM.render(<HelloComponent tbl= {tbl} cdomain={cdomain} data={data}/>, document.getElementById('react-root'))
+  exports.HelloComponent = HelloComponent
 }
